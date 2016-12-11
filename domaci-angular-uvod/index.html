@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Domaci - Angular - Uvod</title>
+	<script src="angular.js"></script>
+	<script src="script.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body ng-app="hwapp" ng-controller="initialController">
+
+	<h1>Naslov</h1>
+	<input type="number" ng-model="prvi">
+	<input type="number" ng-model="drugi">
+	<button ng-click="clean()">Clean</button>
+	Rezultat: <label>{{prvi + drugi}}</label>
+	<br>
+	<img src="1.jpg" ng-show="hide()">
+</body>
+</html>
