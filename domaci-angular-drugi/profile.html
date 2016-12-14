@@ -1,0 +1,55 @@
+<div id="profil">
+	<form id="forma">
+		<label>Ime:</label>
+		<input ng-model="person.name"type="text">
+		<br>
+		<label>Prezime:</label>
+		<input ng-model="person.surname" type="text">
+		<br>
+		<label>Godine:</label>
+		<input ng-model="person.years" type="text">
+		<br>
+		<label>Dodaj u inventar:</label>
+		<input ng-model="value" type="text">
+		<button ng-click="Add()">Dodaj</button>
+	</form>
+
+	<div id="output">
+		<p>Vaše ime je {{person.name}} {{person.surname}} i imate {{person.years}} godina.</p>
+		Vaše stvari u inventaru su:
+		<ul>
+		 	<li ng-repeat="item in person.inventory">
+		 		{{item}}
+		 	</li>
+		</ul>
+	</div>
+
+</div>
+
+<style type="text/css">
+	body {
+	text-align: center;
+	}
+	#forma {
+		margin-top: 2em;
+		text-align: left;
+	}
+	label {
+		text-align: right;
+		display: inline-block;
+		vertical-align: middle;
+		width: 10em;
+		margin: 0 1em 0.5em 0;
+	}
+	#profil {
+		display: flex;
+		justify-content: space-around;
+	}
+	#output {
+		padding: 0.5em;
+		border: 2px solid black;
+		margin: 2em 2em 0 0;
+		text-align: left;
+	}
+	
+</style>
