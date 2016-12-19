@@ -1,0 +1,18 @@
+<div id="product-output">
+	<h3>{{item.product}}</h3>
+	<p>{{item.about}}</p>
+	<label>{{item.price}}kn</label>
+	<label>Serijski broj: {{item.serialNumber}}</label>
+	<label>Dostupno: {{item.available}}</label>
+</div>
+
+<style>
+	#product-output {
+		border: dashed;
+		display: inline-block;
+		padding: 20px;
+	}
+	label {
+		display: flex;
+	}
+</style>
