@@ -1,0 +1,34 @@
+<div>
+	<form id="random-form" name="randomForm">
+		<label>Spol: </label>
+		<input type="text" ng-model="sexInput">
+		<br>
+		<label>Nacionalnost: </label>
+		<input type="text" ng-model="nationalityInput">
+		<br>
+	</form>
+	<button ng-click="Submit()">Submit</button>
+	<div>
+		<label>Ime: {{data.name.first}}</label>
+		<label>Prezime: {{data.name.last}}</label>
+		<label>Broj: {{data.cell}}</label>
+	</div>
+</div>
+
+<style type="text/css">
+	body {
+	text-align: center;
+	}
+	#random-form {
+		margin-top: 2em;
+		text-align: left;
+	}
+	label {
+		text-align: right;
+		display: inline-block;
+		vertical-align: middle;
+		width: 10em;
+		margin: 0 1em 0.5em 0;
+	}
+	
+</style>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Domaci - Angular - Cetvrti</title>
+	
+	<script src="angular/angular.js"></script>
+	<script src="angular/angular-route.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+	<script src="script.js"></script>
+	<script src="pages/homework/homeworkController.js"></script>
+	<script src="pages/profile/profileController.js"></script>
+	<script src="pages/randomUser/randomController.js"></script>
+	<script src="services/profileService.js"></script>
+
+	
+</head>
+<body ng-app="hwapp">
+
+	<a href="/#!/homework">Homework</a>
+	<a href="/#!/profile">Profile</a>
+	<a href="/#!/random">Random User</a>
+	<div ng-view>
+
+
+	</div>
+</body>
+</html>

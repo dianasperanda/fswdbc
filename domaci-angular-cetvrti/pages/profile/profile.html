@@ -1,0 +1,73 @@
+<div id="profil">
+	<form id="forma" name="productForm">
+		<label>Ime:</label>
+		<input ng-model="person.name" type="text">
+		<br>
+		<label>Prezime:</label>
+		<input ng-model="person.surname" type="text">
+		<br>
+		<label>Godine:</label>
+		<input ng-model="person.years" type="text">
+		<br>
+		<label style="color: green;">Dodaj u inventar</label>
+		<br>
+		<label>Ime proizvoda: </label>
+		<input name="product" ng-model="value.product" type="text" required> 
+		<br>
+		<label ng-show="productForm.product.$error.required" style="color: red">Unesi ime!</label>
+		<br>
+		<label>Serijski broj: </label>
+		<input name= "serial" ng-pattern="/^([1-9][0-9]{0,2}|10000)$/" ng-model="value.serialNumber" type="number">
+		<br>
+		<label ng-show="productForm.serial.$error.pattern"  style="color:red">Unesi broj [1-10000]</label>
+		<br>
+		<label>Cijena: </label>
+		<input name = "money" ng-pattern="/^\d*$/" ng-model="value.price" type="number">
+		<br>
+		<label ng-show="productForm.money.$error.pattern" style="color:red">Niste unijeli broj!</label>
+		<br>
+		<label>Opis: </label>
+		<textarea ng-model="value.about" type="text"></textarea> 
+		<br>
+		<label>Dostupnost: </label>
+		<input ng-model="value.available" type="checkbox">
+		<input type="button" ng-click="Add()" ng-disabled="Check()" value="Dodaj"> 
+		</form>
+
+	<div id="output">
+		<p>Vaše ime je {{person.name}} {{person.surname}} i imate {{person.years}} godina.</p>
+		Vaše stvari u inventaru su:
+		<div ng-repeat="item in person.inventory">
+		 	<product-display></product-display>
+		 </div>
+	</div>
+
+</div>
+
+<style type="text/css">
+	body {
+	text-align: center;
+	}
+	#forma {
+		margin-top: 2em;
+		text-align: left;
+	}
+	label {
+		text-align: right;
+		display: inline-block;
+		vertical-align: middle;
+		width: 10em;
+		margin: 0 1em 0.5em 0;
+	}
+	#profil {
+		display: flex;
+		justify-content: space-around;
+	}
+	#output {
+		padding: 0.5em;
+		border: 2px solid black;
+		margin: 2em 2em 0 0;
+		text-align: left;
+	}
+	
+</style>
